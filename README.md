@@ -18,5 +18,5 @@ Ora andando all'URL **http://localhost:8080/** si riuscirà a vedere la nostra w
 **N.B.!** Non è necessario avviare separatamente back-end e front-end perché abbiamo integrato il front-end, creato col framework Vuetify di Vue.js, con il server.
 
 ## Nota per la documentazione
-La documentazione delle API è disponibile all’URL **http://localhost:8080/api-docs**.
+La documentazione delle API è disponibile all’URL **http://localhost:8080/api-docs**.  
 Quando si chiamano le varie API, è necessario specificare lo schema **HTTP**.
