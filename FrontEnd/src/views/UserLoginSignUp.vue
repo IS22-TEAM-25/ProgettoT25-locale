@@ -250,12 +250,6 @@ export default {
             // Here you get the data to modify as you please
           this.$store.commit('autenticazione', data/*{ dataAuth: data, username: this.username }*/);
             if (data.success) {
-              if (this.acquistoUtenteNonAutenticato) {
-                router.push("/productspecs")
-              } else {
-                router.push("/");
-              }
-              this.$store.state.noNavBar = false;
               this.getUser();
               this.getProfile();
             } else {
@@ -275,6 +269,12 @@ export default {
         }).then((resp) => resp.json())
         .then(data => {
           this.$store.commit('prendiProfiloUtente', data);
+          if (this.acquistoUtenteNonAutenticato) {
+                router.push("/productspecs")
+              } else {
+                router.push("/");
+              }
+              this.$store.state.noNavBar = false;
         })
       } catch(error) {
         console.error(error); 
